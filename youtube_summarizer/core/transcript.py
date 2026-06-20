@@ -8,8 +8,26 @@ from youtube_transcript_api._errors import (
     VideoUnavailable,
     CouldNotRetrieveTranscript,
 )
+from youtube_transcript_api.proxies import WebshareProxyConfig, GenericProxyConfig
 
-from youtube_summarizer.config import MAX_TRANSCRIPT_CHARS
+from youtube_summarizer.config import (
+    MAX_TRANSCRIPT_CHARS,
+    WEBSHARE_PROXY_USERNAME,
+    WEBSHARE_PROXY_PASSWORD,
+    YT_PROXY_URL,
+)
+
+
+def _proxy_config():
+    """Residential proxy so YouTube doesn't block the datacenter IP, or None."""
+    if WEBSHARE_PROXY_USERNAME and WEBSHARE_PROXY_PASSWORD:
+        return WebshareProxyConfig(
+            proxy_username=WEBSHARE_PROXY_USERNAME,
+            proxy_password=WEBSHARE_PROXY_PASSWORD,
+        )
+    if YT_PROXY_URL:
+        return GenericProxyConfig(http_url=YT_PROXY_URL, https_url=YT_PROXY_URL)
+    return None
 
 # Hindi first — primary use case, then English fallbacks
 _LANG_PRIORITY = ["hi", "hi-IN", "en", "en-IN", "en-GB", "en-US"]
@@ -33,7 +51,7 @@ def _normalize(fetched) -> list[dict]:
 
 
 def _sync_fetch(video_id: str) -> list[dict]:
-    api = YouTubeTranscriptApi()
+    api = YouTubeTranscriptApi(proxy_config=_proxy_config())
 
     # Step 1: try api.fetch() with preferred languages directly (fastest path)
     for lang in _LANG_PRIORITY:

@@ -1,7 +1,41 @@
 import asyncio
+import json
+import urllib.parse
+import urllib.request
 from functools import partial
 
 import yt_dlp
+
+from youtube_summarizer.config import yt_dlp_proxy_url
+
+
+def _oembed_fallback(url: str) -> dict:
+    """Lightweight metadata via YouTube oEmbed (not bot-blocked like yt-dlp).
+
+    Only returns title/channel/thumbnail; duration/views are unavailable here.
+    """
+    oembed = "https://www.youtube.com/oembed?" + urllib.parse.urlencode(
+        {"url": url, "format": "json"}
+    )
+    proxy = yt_dlp_proxy_url()
+    if proxy:
+        opener = urllib.request.build_opener(
+            urllib.request.ProxyHandler({"http": proxy, "https": proxy})
+        )
+    else:
+        opener = urllib.request.build_opener()
+    with opener.open(oembed, timeout=15) as resp:
+        info = json.loads(resp.read().decode("utf-8"))
+
+    return {
+        "title": info.get("title") or "Unknown Title",
+        "channel": info.get("author_name") or "Unknown Channel",
+        "duration": 0,
+        "description": "",
+        "thumbnail": info.get("thumbnail_url") or "",
+        "upload_date": "",
+        "view_count": 0,
+    }
 
 
 def _sync_fetch(url: str) -> dict:
@@ -12,8 +46,16 @@ def _sync_fetch(url: str) -> dict:
         "extract_flat": False,
         "socket_timeout": 15,
     }
-    with yt_dlp.YoutubeDL(opts) as ydl:
-        info = ydl.extract_info(url, download=False)
+    proxy = yt_dlp_proxy_url()
+    if proxy:
+        opts["proxy"] = proxy
+
+    try:
+        with yt_dlp.YoutubeDL(opts) as ydl:
+            info = ydl.extract_info(url, download=False)
+    except Exception:
+        # yt-dlp blocked/failed (common on cloud IPs) — fall back to oEmbed
+        return _oembed_fallback(url)
 
     upload_date = info.get("upload_date", "")
     if upload_date and len(upload_date) == 8:
