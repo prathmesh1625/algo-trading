@@ -1,0 +1,250 @@
+symbol,company_name,exchange,sector
+ADANIENT,Adani Enterprises Ltd,NSE,Conglomerate
+ADANIPORTS,Adani Ports and SEZ Ltd,NSE,Infrastructure
+ADANIPOWER,Adani Power Ltd,NSE,Power
+ADANIGREEN,Adani Green Energy Ltd,NSE,Renewable Energy
+ADANITRANS,Adani Transmission Ltd,NSE,Power
+APOLLOHOSP,Apollo Hospitals Enterprise Ltd,NSE,Healthcare
+APOLLOTYRE,Apollo Tyres Ltd,NSE,Automobile
+ASIANPAINT,Asian Paints Ltd,NSE,Consumer Goods
+AXISBANK,Axis Bank Ltd,NSE,Banking
+BAJAJ-AUTO,Bajaj Auto Ltd,NSE,Automobile
+BAJAJFINSV,Bajaj Finserv Ltd,NSE,Financial Services
+BAJFINANCE,Bajaj Finance Ltd,NSE,NBFC
+BANKBARODA,Bank of Baroda,NSE,Banking
+BATAINDIA,Bata India Ltd,NSE,Consumer Goods
+BERGEPAINT,Berger Paints India Ltd,NSE,Consumer Goods
+BHARTIARTL,Bharti Airtel Ltd,NSE,Telecom
+BHEL,Bharat Heavy Electricals Ltd,NSE,Capital Goods
+BIOCON,Biocon Ltd,NSE,Pharma
+BPCL,Bharat Petroleum Corporation Ltd,NSE,Oil & Gas
+BRITANNIA,Britannia Industries Ltd,NSE,FMCG
+BSE,BSE Ltd,NSE,Financial Services
+CANBK,Canara Bank,NSE,Banking
+CHOLAFIN,Cholamandalam Investment and Finance Co Ltd,NSE,NBFC
+CIPLA,Cipla Ltd,NSE,Pharma
+COALINDIA,Coal India Ltd,NSE,Mining
+COFORGE,Coforge Ltd,NSE,IT
+COLPAL,Colgate-Palmolive (India) Ltd,NSE,FMCG
+CONCOR,Container Corporation of India Ltd,NSE,Logistics
+CUMMINSIND,Cummins India Ltd,NSE,Capital Goods
+DABUR,Dabur India Ltd,NSE,FMCG
+DEEPAKNTR,Deepak Nitrite Ltd,NSE,Chemicals
+DIVISLAB,Divi's Laboratories Ltd,NSE,Pharma
+DIXON,Dixon Technologies (India) Ltd,NSE,Electronics
+DLF,DLF Ltd,NSE,Real Estate
+DRREDDY,Dr. Reddy's Laboratories Ltd,NSE,Pharma
+EICHERMOT,Eicher Motors Ltd,NSE,Automobile
+ESCORTS,Escorts Kubota Ltd,NSE,Automobile
+FEDERALBNK,Federal Bank Ltd,NSE,Banking
+GAIL,GAIL (India) Ltd,NSE,Oil & Gas
+GLAND,Gland Pharma Ltd,NSE,Pharma
+GLAXO,GlaxoSmithKline Pharmaceuticals Ltd,NSE,Pharma
+GMRINFRA,GMR Airports Infrastructure Ltd,NSE,Infrastructure
+GODREJCP,Godrej Consumer Products Ltd,NSE,FMCG
+GODREJPROP,Godrej Properties Ltd,NSE,Real Estate
+GRASIM,Grasim Industries Ltd,NSE,Cement
+HCLTECH,HCL Technologies Ltd,NSE,IT
+HDFCAMC,HDFC Asset Management Co Ltd,NSE,Financial Services
+HDFCBANK,HDFC Bank Ltd,NSE,Banking
+HDFCLIFE,HDFC Life Insurance Co Ltd,NSE,Insurance
+HEROMOTOCO,Hero MotoCorp Ltd,NSE,Automobile
+HINDALCO,Hindalco Industries Ltd,NSE,Metals
+HINDCOPPER,Hindustan Copper Ltd,NSE,Metals
+HINDPETRO,Hindustan Petroleum Corporation Ltd,NSE,Oil & Gas
+HINDUNILVR,Hindustan Unilever Ltd,NSE,FMCG
+HUDCO,Housing and Urban Development Corporation Ltd,NSE,Finance
+ICICIBANK,ICICI Bank Ltd,NSE,Banking
+ICICIGI,ICICI Lombard General Insurance Co Ltd,NSE,Insurance
+ICICIPRULI,ICICI Prudential Life Insurance Co Ltd,NSE,Insurance
+IDFCFIRSTB,IDFC First Bank Ltd,NSE,Banking
+IEX,Indian Energy Exchange Ltd,NSE,Financial Services
+IGL,Indraprastha Gas Ltd,NSE,Oil & Gas
+INDHOTEL,The Indian Hotels Co Ltd,NSE,Hotels & Hospitality
+INDIGO,InterGlobe Aviation Ltd,NSE,Aviation
+INDUSINDBK,IndusInd Bank Ltd,NSE,Banking
+INDUSTOWER,Indus Towers Ltd,NSE,Telecom Infrastructure
+INFY,Infosys Ltd,NSE,IT
+IOC,Indian Oil Corporation Ltd,NSE,Oil & Gas
+IRCTC,Indian Railway Catering and Tourism Corporation Ltd,NSE,Services
+IRFC,Indian Railway Finance Corporation Ltd,NSE,Finance
+ITC,ITC Ltd,NSE,FMCG
+JINDALSTEL,Jindal Steel & Power Ltd,NSE,Steel
+JSWSTEEL,JSW Steel Ltd,NSE,Steel
+JUBLFOOD,Jubilant FoodWorks Ltd,NSE,Food & Beverage
+KAJARIACER,Kajaria Ceramics Ltd,NSE,Consumer Goods
+KOTAKBANK,Kotak Mahindra Bank Ltd,NSE,Banking
+KPITTECH,KPIT Technologies Ltd,NSE,IT
+LALPATHLAB,Dr. Lal PathLabs Ltd,NSE,Healthcare
+LICHSGFIN,LIC Housing Finance Ltd,NSE,NBFC
+LICI,Life Insurance Corporation of India,NSE,Insurance
+LT,Larsen & Toubro Ltd,NSE,Infrastructure
+LTIM,LTIMindtree Ltd,NSE,IT
+LTTS,L&T Technology Services Ltd,NSE,IT
+M&M,Mahindra & Mahindra Ltd,NSE,Automobile
+MARICO,Marico Ltd,NSE,FMCG
+MARUTI,Maruti Suzuki India Ltd,NSE,Automobile
+MAXHEALTH,Max Healthcare Institute Ltd,NSE,Healthcare
+MCX,Multi Commodity Exchange of India Ltd,NSE,Financial Services
+MFSL,Max Financial Services Ltd,NSE,Insurance
+MGL,Mahanagar Gas Ltd,NSE,Oil & Gas
+MOTHERSON,Samvardhana Motherson International Ltd,NSE,Automobile
+MPHASIS,Mphasis Ltd,NSE,IT
+MRF,MRF Ltd,NSE,Automobile
+MUTHOOTFIN,Muthoot Finance Ltd,NSE,NBFC
+NAUKRI,Info Edge (India) Ltd,NSE,Internet
+NBCC,NBCC (India) Ltd,NSE,Real Estate
+NESTLEIND,Nestle India Ltd,NSE,FMCG
+NTPC,NTPC Ltd,NSE,Power
+NYKAA,FSN E-Commerce Ventures Ltd,NSE,E-commerce
+OBEROIRLTY,Oberoi Realty Ltd,NSE,Real Estate
+OFSS,Oracle Financial Services Software Ltd,NSE,IT
+ONGC,Oil and Natural Gas Corporation Ltd,NSE,Oil & Gas
+PAGEIND,Page Industries Ltd,NSE,Consumer Goods
+PAYTM,One 97 Communications Ltd,NSE,Fintech
+PERSISTENT,Persistent Systems Ltd,NSE,IT
+PETRONET,Petronet LNG Ltd,NSE,Oil & Gas
+PIDILITIND,Pidilite Industries Ltd,NSE,Chemicals
+PNB,Punjab National Bank,NSE,Banking
+POLICYBZR,PB Fintech Ltd,NSE,Fintech
+POLYCAB,Polycab India Ltd,NSE,Electrical
+POWERGRID,Power Grid Corporation of India Ltd,NSE,Power
+PVR,PVR INOX Ltd,NSE,Entertainment
+RECLTD,REC Ltd,NSE,Finance
+RELIANCE,Reliance Industries Ltd,NSE,Conglomerate
+SAIL,Steel Authority of India Ltd,NSE,Steel
+SBICARD,SBI Cards and Payment Services Ltd,NSE,Financial Services
+SBILIFE,SBI Life Insurance Co Ltd,NSE,Insurance
+SBIN,State Bank of India,NSE,Banking
+SHREECEM,Shree Cement Ltd,NSE,Cement
+SHRIRAMFIN,Shriram Finance Ltd,NSE,NBFC
+SIEMENS,Siemens Ltd,NSE,Capital Goods
+SRF,SRF Ltd,NSE,Chemicals
+STAR,Strides Pharma Science Ltd,NSE,Pharma
+SUNPHARMA,Sun Pharmaceutical Industries Ltd,NSE,Pharma
+SUNTV,Sun TV Network Ltd,NSE,Media
+SUPREMEIND,Supreme Industries Ltd,NSE,Plastics
+SUZLON,Suzlon Energy Ltd,NSE,Renewable Energy
+TATACOMM,Tata Communications Ltd,NSE,Telecom
+TATACONSUM,Tata Consumer Products Ltd,NSE,FMCG
+TATAELXSI,Tata Elxsi Ltd,NSE,IT
+TATAMOTORS,Tata Motors Ltd,NSE,Automobile
+TATAPOWER,Tata Power Co Ltd,NSE,Power
+TATASTEEL,Tata Steel Ltd,NSE,Steel
+TCS,Tata Consultancy Services Ltd,NSE,IT
+TECHM,Tech Mahindra Ltd,NSE,IT
+TIINDIA,Tube Investments of India Ltd,NSE,Capital Goods
+TITAN,Titan Company Ltd,NSE,Consumer Goods
+TORNTPHARM,Torrent Pharmaceuticals Ltd,NSE,Pharma
+TRENT,Trent Ltd,NSE,Retail
+TRIDENT,Trident Ltd,NSE,Textiles
+UBL,United Breweries Ltd,NSE,Consumer Goods
+ULTRACEMCO,UltraTech Cement Ltd,NSE,Cement
+UNIONBANK,Union Bank of India,NSE,Banking
+UPL,UPL Ltd,NSE,Agri
+VBL,Varun Beverages Ltd,NSE,Food & Beverage
+VEDL,Vedanta Ltd,NSE,Metals
+VOLTAS,Voltas Ltd,NSE,Consumer Durables
+WIPRO,Wipro Ltd,NSE,IT
+YESBANK,Yes Bank Ltd,NSE,Banking
+ZOMATO,Zomato Ltd,NSE,Food Tech
+ZYDUSLIFE,Zydus Lifesciences Ltd,NSE,Pharma
+DMART,Avenue Supermarts Ltd,NSE,Retail
+HAVELLS,Havells India Ltd,NSE,Electrical
+ABCAPITAL,Aditya Birla Capital Ltd,NSE,Financial Services
+ABFRL,Aditya Birla Fashion and Retail Ltd,NSE,Retail
+ALKEM,Alkem Laboratories Ltd,NSE,Pharma
+ASTRAL,Astral Ltd,NSE,Plastics
+ATUL,Atul Ltd,NSE,Chemicals
+AUROPHARMA,Aurobindo Pharma Ltd,NSE,Pharma
+BALRAMCHIN,Balrampur Chini Mills Ltd,NSE,Sugar
+BANDHANBNK,Bandhan Bank Ltd,NSE,Banking
+BASF,BASF India Ltd,NSE,Chemicals
+BATAINDIA,Bata India Ltd,NSE,Consumer Goods
+CAMS,Computer Age Management Services Ltd,NSE,Financial Services
+CDSL,Central Depository Services (India) Ltd,NSE,Financial Services
+CLEAN,Clean Science and Technology Ltd,NSE,Chemicals
+CROMPTON,Crompton Greaves Consumer Electricals Ltd,NSE,Consumer Durables
+DATAPATTRNS,Data Patterns (India) Ltd,NSE,Defence
+DELHIVERY,Delhivery Ltd,NSE,Logistics
+FIVESTAR,Five-Star Business Finance Ltd,NSE,NBFC
+FORTIS,Fortis Healthcare Ltd,NSE,Healthcare
+FSL,Firstsource Solutions Ltd,NSE,IT
+GICRE,General Insurance Corporation of India,NSE,Insurance
+GNFC,Gujarat Narmada Valley Fertilizers and Chemicals Ltd,NSE,Chemicals
+HAL,Hindustan Aeronautics Ltd,NSE,Defence
+HFCL,HFCL Ltd,NSE,Telecom
+IDBI,IDBI Bank Ltd,NSE,Banking
+INDIANB,Indian Bank,NSE,Banking
+INDIAMART,IndiaMART InterMESH Ltd,NSE,Internet
+INTELLECT,Intellect Design Arena Ltd,NSE,IT
+IOB,Indian Overseas Bank,NSE,Banking
+IPCALAB,IPCA Laboratories Ltd,NSE,Pharma
+JKCEMENT,JK Cement Ltd,NSE,Cement
+JSWENERGY,JSW Energy Ltd,NSE,Power
+KAYNES,Kaynes Technology India Ltd,NSE,Electronics
+KFINTECH,KFin Technologies Ltd,NSE,Financial Services
+KOTAKBANK,Kotak Mahindra Bank Ltd,NSE,Banking
+LINDEINDIA,Linde India Ltd,NSE,Industrial Gases
+MANAPPURAM,Manappuram Finance Ltd,NSE,NBFC
+MAPMYINDIA,CE Info Systems Ltd,NSE,Technology
+METROPOLIS,Metropolis Healthcare Ltd,NSE,Healthcare
+MINDTREE,LTIMindtree Ltd,NSE,IT
+NATIONALUM,National Aluminium Co Ltd,NSE,Metals
+NIACL,New India Assurance Co Ltd,NSE,Insurance
+NLCINDIA,NLC India Ltd,NSE,Power
+NMDC,NMDC Ltd,NSE,Mining
+NSE,National Stock Exchange of India Ltd,NSE,Financial Services
+OLECTRA,Olectra Greentech Ltd,NSE,Automobile
+PATANJALI,Patanjali Foods Ltd,NSE,FMCG
+PCBL,PCBL Ltd,NSE,Chemicals
+PEL,Piramal Enterprises Ltd,NSE,Conglomerate
+PHOENIXLTD,The Phoenix Mills Ltd,NSE,Real Estate
+PIIND,PI Industries Ltd,NSE,Agri
+PNBHOUSING,PNB Housing Finance Ltd,NSE,NBFC
+PRAJ,Praj Industries Ltd,NSE,Renewable Energy
+PRESTIGE,Prestige Estates Projects Ltd,NSE,Real Estate
+PRINCEPIPE,Prince Pipes and Fittings Ltd,NSE,Plastics
+RITES,RITES Ltd,NSE,Infrastructure
+ROUTE,Route Mobile Ltd,NSE,IT
+RVNL,Rail Vikas Nigam Ltd,NSE,Infrastructure
+SCHAEFFLER,Schaeffler India Ltd,NSE,Capital Goods
+SHYAMMETL,Shyam Metalics and Energy Ltd,NSE,Metals
+SJVN,SJVN Ltd,NSE,Power
+SKFINDIA,SKF India Ltd,NSE,Capital Goods
+SOBHA,Sobha Ltd,NSE,Real Estate
+SOLARINDS,Solar Industries India Ltd,NSE,Defence
+SONACOMS,Sona BLW Precision Forgings Ltd,NSE,Automobile
+STARHEALTH,Star Health and Allied Insurance Co Ltd,NSE,Insurance
+SUMICHEM,Sumitomo Chemical India Ltd,NSE,Chemicals
+SUNDARMFIN,Sundaram Finance Ltd,NSE,NBFC
+SUNDRMFAST,Sundram Fasteners Ltd,NSE,Capital Goods
+SUNTECK,Sunteck Realty Ltd,NSE,Real Estate
+TATACHEM,Tata Chemicals Ltd,NSE,Chemicals
+TATATECH,Tata Technologies Ltd,NSE,IT
+TECHM,Tech Mahindra Ltd,NSE,IT
+THERMAX,Thermax Ltd,NSE,Capital Goods
+TIMKEN,Timken India Ltd,NSE,Capital Goods
+UCOBANK,UCO Bank,NSE,Banking
+UJJIVANSF,Ujjivan Small Finance Bank Ltd,NSE,Banking
+UNOMINDA,UNO Minda Ltd,NSE,Automobile
+UTIAMC,UTI Asset Management Co Ltd,NSE,Financial Services
+VAIBHAVGBL,Vaibhav Global Ltd,NSE,Retail
+VAKRANGEE,Vakrangee Ltd,NSE,IT
+VIJAYA,Vijaya Diagnostic Centre Ltd,NSE,Healthcare
+VINATIORGA,Vinati Organics Ltd,NSE,Chemicals
+VSTIND,VST Industries Ltd,NSE,FMCG
+WELSPUNLIV,Welspun Living Ltd,NSE,Textiles
+WHIRLPOOL,Whirlpool of India Ltd,NSE,Consumer Durables
+WOCKPHARMA,Wockhardt Ltd,NSE,Pharma
+ZENITHEXPO,Zenith Exports Ltd,NSE,Textiles
+ZENSARTECH,Zensar Technologies Ltd,NSE,IT
+NIFTY,Nifty 50 Index,NSE,Index
+BANKNIFTY,Nifty Bank Index,NSE,Index
+FINNIFTY,Nifty Financial Services Index,NSE,Index
+MIDCPNIFTY,Nifty Midcap Select Index,NSE,Index
+SENSEX,BSE Sensex Index,BSE,Index
+NIFTYNXT50,Nifty Next 50 Index,NSE,Index
+NIFTYMID150,Nifty Midcap 150 Index,NSE,Index
+NIFTYSMLCAP,Nifty Smallcap 250 Index,NSE,Index
+INDIA VIX,India Volatility Index,NSE,Index

@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}History — TradeLens{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1 class="page-title">Analysis History</h1>
+  <p class="page-sub">All videos you have analyzed. Re-opening a past link returns instantly from cache.</p>
+</div>
+
+{% if items %}
+<div class="history-table-wrap">
+  <table class="history-table">
+    <thead>
+      <tr>
+        <th>Video</th>
+        <th>Channel</th>
+        <th>Duration</th>
+        <th>Analyzed</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in items %}
+      <tr class="history-row">
+        <td>
+          <div class="history-video-cell">
+            {% if item.thumbnail %}
+            <img src="{{ item.thumbnail }}" alt="" class="history-thumb" loading="lazy">
+            {% else %}
+            <div class="history-thumb-ph">▶</div>
+            {% endif %}
+            <a href="/report/{{ item.id }}" class="history-title">{{ item.title }}</a>
+          </div>
+        </td>
+        <td class="history-channel">{{ item.channel }}</td>
+        <td class="history-duration">
+          {% if item.duration %}
+          {% set h = (item.duration // 3600) | int %}
+          {% set m = ((item.duration % 3600) // 60) | int %}
+          {% set s = (item.duration % 60) | int %}
+          {% if h %}{{ h }}h {{ "%02d" | format(m) }}m{% else %}{{ m }}m {{ "%02d" | format(s) }}s{% endif %}
+          {% else %}—{% endif %}
+        </td>
+        <td class="history-date">{{ item.analyzed_at[:19].replace('T', ' ') }}</td>
+        <td class="history-actions">
+          <a href="/report/{{ item.id }}" class="btn-sm">View</a>
+          <a href="/download/{{ item.id }}/markdown" class="btn-sm">MD</a>
+          <a href="/download/{{ item.id }}/pdf" class="btn-sm">PDF</a>
+          <button class="btn-sm btn-danger" onclick="deleteReport('{{ item.id }}', this)">Del</button>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% else %}
+<div class="empty-state">
+  <div class="empty-icon">📭</div>
+  <p>No analyses yet.</p>
+  <a href="/" class="btn-primary">Analyze your first video</a>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+async function deleteReport(id, btn) {
+  if (!confirm('Delete this report from history?')) return;
+  const resp = await fetch(`/api/report/${id}`, { method: 'DELETE' });
+  if (resp.ok) {
+    btn.closest('tr').remove();
+  }
+}
+</script>
+{% endblock %}

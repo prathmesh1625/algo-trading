@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+{% block title %}{{ report.meta.title }} — TradeLens{% endblock %}
+
+{% block content %}
+<div class="report-header">
+  <div class="report-header-inner">
+    {% if report.meta.thumbnail %}
+    <img src="{{ report.meta.thumbnail }}" alt="" class="report-thumb">
+    {% endif %}
+    <div class="report-header-info">
+      <h1 class="report-title">{{ report.meta.title }}</h1>
+      <div class="report-meta-row">
+        <span class="meta-pill">📺 {{ report.meta.channel }}</span>
+        <span class="meta-pill">⏱ {{ report.meta.duration_fmt }}</span>
+        {% if report.meta.upload_date %}
+        <span class="meta-pill">📅 {{ report.meta.upload_date }}</span>
+        {% endif %}
+        {% set outlook = report.market_outlook %}
+        <span class="meta-pill outlook-pill outlook-{{ outlook }}">
+          {% if outlook == 'bullish' %}▲{% elif outlook == 'bearish' %}▼{% else %}●{% endif %}
+          {{ outlook.title() }} Outlook
+        </span>
+      </div>
+      <div class="report-actions">
+        <a href="{{ report.url }}" target="_blank" rel="noopener" class="btn-secondary">▶ Watch Video</a>
+        <a href="/download/{{ entry.id }}/markdown" class="btn-secondary">⬇ Markdown</a>
+        <a href="/download/{{ entry.id }}/pdf" class="btn-secondary">⬇ PDF</a>
+        <a href="/" class="btn-secondary">+ Analyze Another</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="report-body">
+
+  <!-- TL;DR -->
+  <section class="report-section tldr-section">
+    <h2 class="section-heading">TL;DR</h2>
+    <p class="tldr-text">{{ report.tldr }}</p>
+
+    {% if report.indices or report.sectors %}
+    <div class="tag-row">
+      {% for idx in report.indices %}
+      <span class="tag tag-index">{{ idx }}</span>
+      {% endfor %}
+      {% for sector in report.sectors %}
+      <span class="tag tag-sector">{{ sector }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </section>
+
+  <!-- Key Concepts -->
+  {% if report.key_concepts %}
+  <section class="report-section">
+    <h2 class="section-heading">Key Concepts</h2>
+    <div class="concepts-grid">
+      {% for kc in report.key_concepts %}
+      <div class="concept-card">
+        <span class="concept-name">{{ kc.concept }}</span>
+        <span class="concept-desc">{{ kc.explanation }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Tickers Table -->
+  {% if report.tickers %}
+  <section class="report-section">
+    <h2 class="section-heading">Stocks &amp; Tickers Mentioned</h2>
+    <div class="table-wrap">
+      <table class="tickers-table">
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Company</th>
+            <th>Exch.</th>
+            <th>Sector</th>
+            <th>Sentiment</th>
+            <th>Price Target</th>
+            <th>Stop Loss</th>
+            <th>Context</th>
+            <th>Timestamp</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for t in report.tickers %}
+          {% set s = t.sentiment | default('neutral') %}
+          <tr class="ticker-row sentiment-{{ s }}">
+            <td>
+              <span class="ticker-symbol">{{ t.symbol }}</span>
+              {% if t.validated %}
+              <span class="validated-dot" title="Verified NSE/BSE symbol">✓</span>
+              {% endif %}
+            </td>
+            <td class="company-col">{{ t.company_name | default('—') }}</td>
+            <td><span class="exchange-badge">{{ t.exchange | default('NSE') }}</span></td>
+            <td class="sector-col">{{ t.sector | default('—') }}</td>
+            <td>
+              <span class="sentiment-badge sentiment-{{ s }}">
+                {% if s == 'bullish' %}▲{% elif s == 'bearish' %}▼{% else %}●{% endif %}
+                {{ s.title() }}
+              </span>
+            </td>
+            <td class="target-col">{{ t.price_target or '—' }}</td>
+            <td class="target-col">{{ t.stop_loss or '—' }}</td>
+            <td class="context-col">{{ t.context | default('—') }}</td>
+            <td>
+              {% if t.timestamp %}
+              <a href="{{ report.url }}&t={{ t.timestamp | replace(':', 'h', 1) | replace(':', 'm', 1) }}s" target="_blank" class="ts-link">{{ t.timestamp }}</a>
+              {% else %}—{% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Detailed Summary -->
+  {% if report.summary_sections %}
+  <section class="report-section">
+    <h2 class="section-heading">Detailed Summary</h2>
+    <div class="summary-list">
+      {% for sec in report.summary_sections %}
+      <div class="summary-item">
+        <div class="summary-item-header">
+          {% if sec.timestamp %}
+          <a href="{{ report.url }}&t={{ sec.timestamp | replace(':', 'h', 1) | replace(':', 'm', 1) }}s" target="_blank" class="ts-badge">{{ sec.timestamp }}</a>
+          {% endif %}
+          <span class="summary-item-title">{{ sec.title }}</span>
+        </div>
+        <p class="summary-item-content">{{ sec.content }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Notable Quotes -->
+  {% if report.notable_quotes %}
+  <section class="report-section">
+    <h2 class="section-heading">Notable Quotes</h2>
+    <div class="quotes-list">
+      {% for q in report.notable_quotes %}
+      <blockquote class="notable-quote">{{ q }}</blockquote>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <div class="disclaimer">
+    <p>⚠️ This report was auto-generated from the video transcript using AI. It is for informational purposes only and does not constitute financial advice. Always do your own research before making investment decisions.</p>
+    <p class="analyzed-note">Analyzed on {{ report.analyzed_at[:19].replace('T', ' ') }}</p>
+  </div>
+
+</div>
+{% endblock %}
