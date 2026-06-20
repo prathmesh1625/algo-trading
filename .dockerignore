@@ -1,0 +1,15 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+*.db
+data/history.db
+*.pdf
+*.log
+.git/
+.gitignore
+.DS_Store
+Thumbs.db
+PLAN_youtube_summarizer.md
